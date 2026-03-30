@@ -37,17 +37,18 @@ class linked_list[T]:
         self.current = None
         self.head: Optional[Link[T]] = None
         self.tail: Optional[Link[T]] = None
+        self.iter_loc = self.head
 
     def __next__(self):
-        if self.current is None:
-            self.current = 1
-        while True:
-            self.current += 1
-            if self.current < 0:
-                raise StopIteration
+        if self.iter_loc is None:
+            raise StopIteration
+        res = self.iter_loc.element
+        self.iter_loc = self.iter_loc.next
+        return res
 
     def __iter__(self):
-        pass
+        self.iter_loc = self.head
+        return self
 
     # Lab: complete these operations in order
     def append(self, x: T):
@@ -118,3 +119,11 @@ class linked_list[T]:
         pass
 
 p100 = Prime100()
+my_linked_list = linked_list()
+
+my_linked_list.append(1)
+my_linked_list.append(2)
+my_linked_list.append(3)
+
+for i in my_linked_list:
+    print(i)
