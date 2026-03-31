@@ -118,12 +118,12 @@ class linked_list[T]:
     def sort(self):
         pass
 
-p100 = Prime100()
-my_linked_list = linked_list()
-
-my_linked_list.append(1)
-my_linked_list.append(2)
-my_linked_list.append(3)
-
-for i in my_linked_list:
-    print(i)
+# p100 = Prime100()
+# my_linked_list = linked_list()
+#
+# my_linked_list.append(1)
+# my_linked_list.append(2)
+# my_linked_list.append(3)
+#
+# for i in my_linked_list:
+#     print(i)
