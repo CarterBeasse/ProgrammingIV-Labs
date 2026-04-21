@@ -27,16 +27,18 @@
 
 #lin_search([1,2,3], 2, 0) -> '1' because 2 is at index 1
 def lin_search(vals: list[int], target: int, i: int):
-    if target not in vals:
-        return -1
-    else:
+    if i == len(vals) - 1:
         if vals[i] == target:
-            return vals[i]
+            return i
+        else:
+            return -1
+    else:
+        t = vals[i]
+        if vals[i] == target:
+            return t
         else:
             return lin_search(vals, target, i + 1)
 print(lin_search([2,4,5,9,3], 3, 0))
-
-
 
 def bin_search(vals: list[int], target: int):
     return bin_search_h(vals,target, 0, len(vals) - 1)
