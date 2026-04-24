@@ -20,8 +20,8 @@ def nontail_fact(n):
     else:
         return n * nontail_fact(n-1)
         
-# print(tail_fact(5))  
-# print(nontail_fact(5))
+#print(tail_fact(5))
+#print(nontail_fact(5))
 
 
 """
@@ -44,20 +44,18 @@ def countDownAndUp(number):
         print(number)
         return
 
-#trace countDownAndUp(3)
+#countDownAndUp(3)
 
 def foo(n):
     if n==4:
         return n
     else:
-        return 2*function(n+1)
-        
-#trace function(2)
+        return 2 * foo(n+1)
+#print(foo(2))
 
 def bar(x,y):
     if x==0:
         return y
     else:
-        return function(x-1,x+y)
-
-#trace bar(4,3)
+        return bar(x-1,x+y)
+print(bar(4,3))
