@@ -7,3 +7,5 @@ class Node:
         self.parent = Node
         self.left = Node
         self.right = Node
+
+    def create_tree(self):
